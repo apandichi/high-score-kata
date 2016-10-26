@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+
+<h1>High Score Kata</h1>
+
+<p id="highscore"></p>
+
+<input type="text" id="newHighscore"></input>
+<button type="button" onclick="updateHighscore()">Update highscore</button>
+
+<script src="src/Highscore.js"></script>
+
+<script>
+  var highscore = new Highscore();
+  $("#highscore").text("HIGHSCORE: " + highscore.highscore);
+  function updateHighscore() {
+    var newHighscore = $('#newHighscore').val();
+    highscore.updateHighscore(newHighscore);
+  }
+</script>
+
+</body>
+</html>
